@@ -1,0 +1,142 @@
+%\section{APPLYING YOUR STATE OF THE ART KNOWLEDGE IN [B] TO YOUR PROBLEM OR CHALLENGE IDENTIFIED IN [A]:}
+\section{Using Design Thinking and Lean Startup to Our Approach}
+
+I have learnt that Design Thinking starts with getting the user feedback and then design a solution to solve users' problem. On the other hand, lean startup starts with idea and then idea is tested in a iterative way.
+
+In my case, after an intensive research and experiments with existing Cloud computing and Fog computing technologies, we have envisioned a Fog Computing solution and  described the solution\citep{ProgFogNode}. The key point here is, we already have an idea. So, lean startup strategy is more suitable for my case than design thinking. However, I tried to use some methods from design thinking as well. So, I tested our idea both in a design thinking perspective and lean startup perspective. In following subsections, I will explain the methods I used and how they fall into design thinking and lean startup strategy.
+
+One point to note here, since the paper we published was a peer-reviewed paper, it can be seen that in a way, the product idea was tested with 3 reviewers who are academics in this field; meaning that the idea is technically feasible. But, we did not receive any feedback about the features of the product. Hence, based on the literature review from previous section, I want to get user feedback to learn and develop a better product. %\todo{can this be our I\&E problem?}
+
+As we planed to get the feedback from our users in more lean startup style, so, I developed a \ac{MVP} based on our idea. I believe that, to get better feedback for technical solution a \ac{MVP} will be more effective so that customers can understand what the product does. 
+%\todo{add this somewhere}
+
+\subsection{Design Thinking Approach}
+Though we have the product idea, still I decided to use design thinking to some extent. The way I did it is explained below:
+
+\begin{itemize}
+\item We can observe the user how they run \ac{IoT} applications as in `Shadowing' method and ask questions to find out what problems they face. 
+\item If our \ac{MVP} solves their initial problems we can select these users for our 2nd method, `Qualitative Interview' where We will let them use our product and will get their feedback. 
+\item If our \ac{MVP} does not really solve any user's problem we did not take him in consideration in the next step.
+\end{itemize}
+
+So, I spent some time and talked to 3 students individually who are familiar with \ac{IoT} and Cloud Computing. Particularly, I asked 3 questions, during the Shadowing method.
+
+\begin{enumerate}
+\item Why do you use \ac{IoT} applications? 
+\item Where would you run your application in a Fog node or cloud?
+\item Where (in which field) do you think Fog computing is needed?
+\end{enumerate}
+
+The answers are summerized in table \ref{table:shadowing}.
+
+
+\begin{table}[H]
+\centering
+  \begin{tabular}{ | l | p{60mm} | l | p{60mm} |}
+    \hline
+    Student & Question 1 & Question 2 & Question 3 \\ \hline
+    S1 & Energy saving(smart home) & Fog & Healthcare \\ \hline
+    S2 & connectivity(wearables) & Fog & \ac{IIoT}\newline Healthcare \\ \hline 
+    S3 & connectivity(connected cars, wearables) & Cloud & Smart Grid, \ac{IIoT}  \\
+    \hline
+  \end{tabular}
+  \caption{Answers from the Students}
+  \label{table:shadowing}
+\end{table}
+
+
+
+From the feedbacks, I found that all students agreed that Fog computing will be effective in some industry, still we found one student who prefer to use Cloud for \ac{IoT} application. In next step, I tested our \ac{MVP} in a lean startup style. But I did not consider the student `S3' as our \ac{MVP} is a Fog computing solution as does not really solve problem of `S3'. 
+
+%We will run Shadowing, Qualitative Interview, Five Whys, and Paper Prototyping to get customer feedback. \todo{add somewhere} 
+
+\subsection{Lean Startup Style}
+
+In this step, I will use our primarily developed \ac{MVP} to get customer feedback. To test, I will consider 2 (S1,S2) students that I found in previous step, who prefer Fog computing over Cloud computing for \ac{IoT} application. I also talked to 2 fellow colleagues (C1,C2) who are familiar and can develop \ac{IoT} applications. So, in total I have tested our \ac{MVP} with 4 users and got valuable feedback.
+
+The \ac{MVP} I developed, is a Fog node is a single Raspberry Pi 3, which is a small computer with limited CPU and memory. The Fog node can connect to FS20 and Zigbee receivers to receive signal from sensors. I gave that to 4 users and asked them to run their \ac{IoT} applications. 
+
+%As explained before, our users are IT-specialists and application developer but they are not customer. --add somewhere
+
+After the users experienced my \ac{MVP} I tried the lean startup methods to get their feedback. 
+
+\subsubsection{Qualitative Interview}
+One lean startup style method to get customer feedback is qualitative interview. I formulated 3 questions for the qualitative interview which are open and non-leading \citep{qualitativeinterview}. I have listed them below.
+
+\begin{enumerate}
+\item What do you think about this solution?
+\item How would you describe the learning process about this solution?
+\item How do you think we can improve this solution?
+\end{enumerate}
+
+I have analysed their answers to identify the focal points from the feedbacks. From 3 users I received valuable feedback, using which we can pivot and add more features in the next Build phase. From 1 other user (S2) we did not receive feedback about how can we improve this solution, even though he liked the solution and gave consent about using it in future. I have organized the feedback in table \ref{table:quantative}. 
+
+\begin{table}[H]
+\centering
+  \begin{tabular}{ | l | c | r | p{80mm} |}
+    \hline
+    User & Question 1 & Question 2 & Question 3 \\ \hline
+    S1 & Positive & Easy & Docker Container, \newline Remote applications deployment(Start/Stop) \\ \hline
+    S2 & Positive & Easy & No suggestions at this moment \\ \hline 
+    C1 & Positive & Moderate &   Multiple Application in single Fog node,\newline Docker Container,\newline Container Orchestration,\newline Large scale Federation \\\hline
+    C2 & Positive & Easy & Docker Container \newline Multiple application using in same Fog node \\\hline
+  \end{tabular}
+  \caption{Qualitative Interview}
+  \label{table:quantative}
+\end{table}
+
+I summarized their answer in above format. I considered the answer of question 1 as either `positive' or `negative' based on the overall impression from the answers. I translated the answers of question 2 as ratings of 3 scale; easy, moderate, difficult. Again, it was translated from my impression of their overall experience. Lastly, I listed the features they mentioned as answer of question 3. 
+
+All the users gave positive feedback to question 1. They think the solution is something innovative and they would use this Fog Computing solution for their \ac{IoT} applications. All the users but user C1 consider this Fog Computing solution as easy to learn and easy to run their applications. User C1 consider this solution is moderately difficult. They all gave inputs to add feature to improve this solution as answer of question 3. Some of these features are already in our road-map, so I learnt that users would like to see these features. And I learnt it, even before I introduced these features to them. We are planning to prioritize the features according to how many users wanted those features. 
+
+One feature, `large-scale federation'  that were not in our plan is a new input for me and I decided to test if other users will want this feature.  I also wanted to learn if some features that a user wants, are also desirable for other users. 
+
+\subsubsection{Paper Prototyping}
+I decided to get further feedback from the users based on `Paper Prototyping'\citep{paperprototyping}. The technique was simple; I explained a feature on the white board with a drawing and asked an user if he would want this feature or not. 
+
+In this way, for the user S2 from Table \ref{table:quantative}, who did not suggest any features for improvement, even for him I received some feedback. Also for other users I applied this method. I showed user S1, the features mentioned by other users. Then, I asked if he would want these features. Similarly, I tested with all the users and learnt which features users want and which not. 
+
+I listed their feedback in Table \ref{table:paperprototyping}. I want to point out here that the feature `Container Orchestration' includes 2 other feature `Multiple Application in single Fog node' and `Remote applications deployment(Start/Stop)'. %The latter 2 feature are part of `Container Orchestration'. 
+So, I tested only `Container Orchestration' with other 2 different features.
+
+\begin{table}[H]
+\centering
+  \begin{tabular}{ | l | c | r | s |}
+    \hline
+    User & Docker Container & Container Orchestration & Large Scale Federation \\ \hline
+    S1 & Yes & No & Out of Scope \\ \hline
+    S2 & Yes & No & Out of Scope \\ \hline 
+    C1 & Yes & Yes & Yes \\ \hline
+    C2 & Yes & Yes & Out of Scope \\ \hline
+  \end{tabular}
+  \caption{Paper Prototyping Method}
+  \label{table:paperprototyping}
+\end{table}
+
+With this method, I almost tested all our envisioned features for our Fog Computing solution with all the users. I learned that, all users would like to run their application using `Docker Container' which makes application independent of the platform(Windows,Linux,Mac). I found that two advanced users would like `Container Orchestration' while the students S1 and S2 would want some features like `running multiple application in same Fog node' and `remote start/stop of application' using a GUI. One feature, `Large Scale Federation' is a sophisticated feature, but most of users said that, for them it is out of scope. Because of the work they will do with our Fog computing solution is not industry level. However, I will keep this feature in our road-map to test in the future again.
+
+\subsubsection{Five Whys}
+
+Finally, I wanted to understand the core problems that users face. In order to do that, I followed `Five Whys' method to get feedback about why they want those features. What problems of them these features will solve.
+
+I asked each user about the features they wanted in the first place during Qualitative Interview. Like the way `Five Whys' works\cite[p.~212]{leanstartup}, I kept asking `Why?' to the user for 5 times as he give reason behind using a feature. I listed the results in table \ref{table:fivewhys} briefly.
+
+\begin{table}[H]
+\centering
+  \begin{tabular}{ | l | p{60mm} | p{60mm} |}
+    \hline
+    User & Desired Feature & Problem to Solve \\ \hline
+    S1 & Docker Container, \newline Remote applications deployment(Start/Stop) & Platform dependency, \newline Low level application management \\ \hline
+    
+    C1   &   Multiple Application in single Fog node,\newline Docker Container,\newline Container Orchestration,\newline Large scale Federation & Expense,\newline\newline Platform dependency,\newline Multiple application management,\newline Industry level management \\\hline
+    C2   & Docker Container, \newline Multiple application in single Fog node & Platform dependency \newline Expense \\\hline
+  \end{tabular}
+  \caption{Five Whys Method}
+  \label{table:fivewhys}
+\end{table}
+
+This lean startup method helped me to understand why the users mentioned each feature. As user S2 did not suggest any feature during qualitative interview, I could not perform `Five Whys' test with that user.
+
+\subsection{Summary of the Findings}
+Though design thinking and lean startup methods has different use cases to apply, I found out how to choose the right methods to fit my I\&E problem. After understanding these methods, I used both design thinking and lean startup strategy to get the feedback from user before developing all the features for our Fog Computing solution. Using these methods, helped me to test the ideas among the users and I have clear findings about we are going to develop and add next to our \ac{MVP}. Most of all, it saved a lot of effort as `lean startup' promises. 
+

@@ -1,0 +1,62 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+
+%\title{thesis proposal}
+%\author{Saiful Hoque }
+%\date{June 2016}
+
+
+%\usepackage{geometry}
+%\geometry{legalpaper, margin=1.2in}
+
+%for a4 size use the below format
+\usepackage[a4paper,left=3cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+
+
+
+
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\usepackage{float}
+\usepackage{acronym}
+
+\usepackage{verbatim}
+\usepackage{todonotes}
+
+\begin{document}
+
+\include{./misc/titlepage}
+%\maketitle
+
+%%======================Abstract=======================
+\thispagestyle{empty}
+
+
+%%   
+\input{main-contents/abstract}
+
+%%==================Table of Content===========================
+\newpage
+\thispagestyle{empty}\textbf{}
+  \tableofcontents
+\newpage
+%%===================Main Content =================
+
+\setcounter{page}{1}
+\input{main-contents/introduction}
+\input{main-contents/SOAandInEchallenge}
+\input{main-contents/goals}
+\input{main-contents/conclusion}
+%%\input{main-contents/gantt}
+
+%%=============================================
+\newpage
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\include{./misc/acro}
+\end{document}
